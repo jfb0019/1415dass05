@@ -243,7 +243,7 @@ Therefore #receiver sends a packet across the token ring network, until either
 		};
 
 		if (packet.destination_.equals(currentNode.name_)) {
-			result = packet.printDocument(currentNode, this, report);
+			result = packet.printDocument(currentNode, report);
 		} else {
 			try {
 				report.write(">>> Destinition not found, print job cancelled.\n\n");
@@ -257,15 +257,7 @@ Therefore #receiver sends a packet across the token ring network, until either
 		return result;
 	}
 
-	public void printAccounting(Writer report, String author, String title)
-			throws IOException {
-		report.write("\tAccounting -- author = '");
-		report.write(author);
-		report.write("' -- title = '");
-		report.write(title);
-		report.write("'\n");
-	}
-
+	
 	/**
 Return a printable representation of #receiver.
  <p><strong>Precondition:</strong> isInitialized();</p>
