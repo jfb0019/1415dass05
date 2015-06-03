@@ -177,7 +177,7 @@ which should be treated by all nodes.
 				report.write("\tNode '");
 				report.write(currentNode.name_);
 				report.write("' accepts broadcase packet.\n");
-				currentNode.printLogging(report, this);
+				currentNode.printLogging(report);
 			} catch (IOException exc) {
 				// just ignore
 			};
@@ -227,7 +227,7 @@ Therefore #receiver sends a packet across the token ring network, until either
 		startNode = (Node) workstations_.get(workstation);
 
 		try {
-			startNode.printLogging(report, this);
+			startNode.printLogging(report);
 		} catch (IOException exc) {
 			// just ignore
 		};
@@ -235,7 +235,7 @@ Therefore #receiver sends a packet across the token ring network, until either
 		while ((! packet.destination_.equals(currentNode.name_))
 				& (! packet.origin_.equals(currentNode.name_))) {
 			try {
-				currentNode.printLogging(report, this);
+				currentNode.printLogging(report);
 			} catch (IOException exc) {
 				// just ignore
 			};
