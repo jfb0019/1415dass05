@@ -12,4 +12,12 @@ public class Printer extends Node {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void printNodeInformation(StringBuffer buf) {
+
+		buf.append("Printer ");
+		buf.append(name_);
+		buf.append(" [Printer]");
+
+	}
+
 }

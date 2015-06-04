@@ -12,4 +12,11 @@ public class Workstation extends Node {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void printNodeInformation(StringBuffer buf) {
+
+		buf.append("Workstation ");
+		buf.append(name_);
+		buf.append(" [Workstation]");
+	}
+
 }
