@@ -2,13 +2,15 @@ package lanSimulation.internals;
 
 public class Workstation extends Node {
 
-	public Workstation(byte type, String name) {
-		super(type, name);
+
+
+	public Workstation(String name, Node nextNode) {
+		super(name, nextNode);
 		// TODO Auto-generated constructor stub
 	}
 
-	public Workstation(byte type, String name, Node nextNode) {
-		super(type, name, nextNode);
+	public Workstation(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -18,5 +20,11 @@ public class Workstation extends Node {
 		buf.append(name_);
 		buf.append(" [Workstation]");
 	}
+	public void printXMLNodeInformation(StringBuffer buf) {
 
+			buf.append("<workstation>");
+			buf.append(name_);
+			buf.append("</workstation>");
+			
+	}
 }
